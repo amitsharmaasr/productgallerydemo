@@ -128,10 +128,10 @@ body {
                 </div>
                 <div class="pl-md-0 pl-1"><b>&#8377; {{$products['price']}}</b></div>
                 <div class="pl-md-0 pl-2"> <span class="px-md-3 px-1">{{$products['quantity']}}</span></div>
-                <div class="pl-md-0 pl-1"><b>{{$products['price']}}</b></div>
+                <div class="pl-md-0 pl-1"><b>{{$products['price'] * $products['quantity']}}</b></div>
                 <div class="close"><a href="{{url('removefromcart').'/'.$index}}" class="btn btn-info float-left" data-abc="true"> &times; </a></div>
             </div>
-            <?php $total += $products['price']; }?>
+            <?php $total += $products['price']*$products['quantity']; }?>
         </div>
     </div>
 </div>
